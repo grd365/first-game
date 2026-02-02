@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Day 01</title>
+    <title>Game</title>
     <style>
         /* Engine-Specific */
         * {
@@ -26,6 +26,8 @@
     <script src="/game/MainScene.js"></script>
     <script src="/game/TriangleComponent.js"></script>
     <script src="/game/TriangleGameObject.js"></script>
+    <script src="/game/WallComponent.js"></script>
+    <script src="/game/WallGameObject.js"></script>
     
     <script>
         // Engine-specific
@@ -80,59 +82,59 @@
 
 
 
-            //Draw the first character
-            ctx.save()
-            ctx.translate(position.x, position.y)
+            // //Draw the first character
+            // ctx.save()
+            // ctx.translate(position.x, position.y)
 
-            ctx.beginPath()
-            ctx.moveTo(110, 90)
-            ctx.lineTo(145, 100)
-            ctx.lineTo(145, 90)
-            ctx.lineTo(155, 90)
-            ctx.lineTo(155, 100)
-            ctx.lineTo(190, 90)
-            ctx.lineTo(200, 140)
-            ctx.lineTo(175, 150)
-            ctx.lineTo(150, 140)
-            ctx.lineTo(125, 150)
-            ctx.lineTo(100, 140)
-            ctx.lineTo(110, 90)
-
-
-            ctx.lineWidth = 5
-            ctx.strokeStyle = "purple"
-            ctx.stroke()
-
-            ctx.fillStyle = "red"
-            ctx.fill()
-            ctx.restore()
-
-            //Draw the second character
-            ctx.save()
-            ctx.translate(position2.x, position2.y)
-
-            ctx.beginPath()
-            ctx.moveTo(110, 90)
-            ctx.lineTo(145, 100)
-            ctx.lineTo(145, 90)
-            ctx.lineTo(155, 90)
-            ctx.lineTo(155, 100)
-            ctx.lineTo(190, 90)
-            ctx.lineTo(200, 140)
-            ctx.lineTo(175, 150)
-            ctx.lineTo(150, 140)
-            ctx.lineTo(125, 150)
-            ctx.lineTo(100, 140)
-            ctx.lineTo(110, 90)
+            // ctx.beginPath()
+            // ctx.moveTo(110, 90)
+            // ctx.lineTo(145, 100)
+            // ctx.lineTo(145, 90)
+            // ctx.lineTo(155, 90)
+            // ctx.lineTo(155, 100)
+            // ctx.lineTo(190, 90)
+            // ctx.lineTo(200, 140)
+            // ctx.lineTo(175, 150)
+            // ctx.lineTo(150, 140)
+            // ctx.lineTo(125, 150)
+            // ctx.lineTo(100, 140)
+            // ctx.lineTo(110, 90)
 
 
-            ctx.lineWidth = 5
-            ctx.strokeStyle = "teal"
-            ctx.stroke()
+            // ctx.lineWidth = 5
+            // ctx.strokeStyle = "purple"
+            // ctx.stroke()
 
-            ctx.fillStyle = "orange"
-            ctx.fill()
-            ctx.restore()
+            // ctx.fillStyle = "red"
+            // ctx.fill()
+            // ctx.restore()
+
+            // //Draw the second character
+            // ctx.save()
+            // ctx.translate(position2.x, position2.y)
+
+            // ctx.beginPath()
+            // ctx.moveTo(110, 90)
+            // ctx.lineTo(145, 100)
+            // ctx.lineTo(145, 90)
+            // ctx.lineTo(155, 90)
+            // ctx.lineTo(155, 100)
+            // ctx.lineTo(190, 90)
+            // ctx.lineTo(200, 140)
+            // ctx.lineTo(175, 150)
+            // ctx.lineTo(150, 140)
+            // ctx.lineTo(125, 150)
+            // ctx.lineTo(100, 140)
+            // ctx.lineTo(110, 90)
+
+
+            // ctx.lineWidth = 5
+            // ctx.strokeStyle = "teal"
+            // ctx.stroke()
+
+            // ctx.fillStyle = "orange"
+            // ctx.fill()
+            // ctx.restore()
 
         }
 

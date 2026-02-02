@@ -13,5 +13,5 @@ class Input{
             return false
         }
     })
-}
+    }
 }

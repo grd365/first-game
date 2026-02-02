@@ -1,4 +1,4 @@
-class TriangleComponent extends Component {
+class WallComponent extends Component {
     start() {
 
     }
@@ -6,12 +6,13 @@ class TriangleComponent extends Component {
     }
     draw(ctx) {
         ctx.save()
-        ctx.translate(this.transform.position.x, this.transform.position.y)
+        ctx.translate()
 
         ctx.beginPath()
         ctx.moveTo(0,0)
         ctx.moveTo(50,50)
-        ctx.moveTo(-50, 50)
+        ctx.moveTo(100,50)
+        ctx.moveTo(100,100)
 
         ctx.lineWidth = 2
         ctx.strokeStyle = "black"
