@@ -5,9 +5,11 @@ class GameObject{
         this.addComponent(new Transform())
     }
 
-    addComponent(component){
+    addComponent(component, options){
+        Object.assign(component, options)
         this.components.push(component)
         component.gameObject = this
+        return component
     }
 
     update(){

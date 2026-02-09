@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Game</title>
+    <title>Day 01</title>
     <style>
         /* Engine-Specific */
         * {
@@ -14,34 +14,34 @@
 
 <body>
     <canvas id="canv"></canvas>
-    <script src="/engine/Engine.js"></script>
-    <script src="/engine/Scene.js"></script>
-    <script src="/engine/GameObject.js"></script>
-    <script src="/engine/Component.js"></script>
-    <script src="/engine/Input.js"></script>
+    <script src="./engine/Engine.js"></script>
+    <script src="./engine/Scene.js"></script>
+    <script src="./engine/GameObject.js"></script>
+    <script src="./engine/Component.js"></script>
+
+    <script src="./engine/components/Transform.js"></script>
+    <script src="./engine/components/TextLabel.js"></script>
+    <script src="./engine/components/Polygon.js"></script>
+
+    <script src="./engine/Input.js"></script>
+    <script src="./engine/Time.js"></script>
+    <script src="./engine/Vector2.js"></script>
     
-    <script src="/engine/components/Transform.js"></script>
     
-    
-    <script src="/game/MainScene.js"></script>
-    <script src="/game/TriangleComponent.js"></script>
-    <script src="/game/TriangleGameObject.js"></script>
-    <script src="/game/WallComponent.js"></script>
-    <script src="/game/WallGameObject.js"></script>
+    <script src="./game/MainScene.js"></script>
+    <script src="./game/WallGameObject.js"></script>
+    <script src="./game/WallComponent.js"></script>
+
+    <script src="./game/TriangleComponent.js"></script>
+    <script src="./game/TriangleGameObject.js"></script>
+
+    <script src="./game/EnemyComponent.js"></script>
+    <script src="./game/EnemyGameObject.js"></script>
+
     
     <script>
-        // Engine-specific
         
         // Engine-specific
-        class Vector2 {
-            constructor(x, y){
-                this.x = x
-                this.y = y
-            }
-            
-            x
-            y
-        }
 
         //Game-specific
         //Starting position of my character
@@ -75,68 +75,68 @@
             position2.y++
         }
 
-        function draw() {
+        // function draw() {
 
-            canvas.width = window.innerWidth
-            canvas.height = window.innerHeight
-
-
-
-            // //Draw the first character
-            // ctx.save()
-            // ctx.translate(position.x, position.y)
-
-            // ctx.beginPath()
-            // ctx.moveTo(110, 90)
-            // ctx.lineTo(145, 100)
-            // ctx.lineTo(145, 90)
-            // ctx.lineTo(155, 90)
-            // ctx.lineTo(155, 100)
-            // ctx.lineTo(190, 90)
-            // ctx.lineTo(200, 140)
-            // ctx.lineTo(175, 150)
-            // ctx.lineTo(150, 140)
-            // ctx.lineTo(125, 150)
-            // ctx.lineTo(100, 140)
-            // ctx.lineTo(110, 90)
+            // canvas.width = window.innerWidth
+            // canvas.height = window.innerHeight
 
 
-            // ctx.lineWidth = 5
-            // ctx.strokeStyle = "purple"
-            // ctx.stroke()
 
-            // ctx.fillStyle = "red"
-            // ctx.fill()
-            // ctx.restore()
+        //     //Draw the first character
+        //     ctx.save()
+        //     ctx.translate(position.x, position.y)
 
-            // //Draw the second character
-            // ctx.save()
-            // ctx.translate(position2.x, position2.y)
-
-            // ctx.beginPath()
-            // ctx.moveTo(110, 90)
-            // ctx.lineTo(145, 100)
-            // ctx.lineTo(145, 90)
-            // ctx.lineTo(155, 90)
-            // ctx.lineTo(155, 100)
-            // ctx.lineTo(190, 90)
-            // ctx.lineTo(200, 140)
-            // ctx.lineTo(175, 150)
-            // ctx.lineTo(150, 140)
-            // ctx.lineTo(125, 150)
-            // ctx.lineTo(100, 140)
-            // ctx.lineTo(110, 90)
+        //     ctx.beginPath()
+        //     ctx.moveTo(110, 90)
+        //     ctx.lineTo(145, 100)
+        //     ctx.lineTo(145, 90)
+        //     ctx.lineTo(155, 90)
+        //     ctx.lineTo(155, 100)
+        //     ctx.lineTo(190, 90)
+        //     ctx.lineTo(200, 140)
+        //     ctx.lineTo(175, 150)
+        //     ctx.lineTo(150, 140)
+        //     ctx.lineTo(125, 150)
+        //     ctx.lineTo(100, 140)
+        //     ctx.lineTo(110, 90)
 
 
-            // ctx.lineWidth = 5
-            // ctx.strokeStyle = "teal"
-            // ctx.stroke()
+        //     ctx.lineWidth = 5
+        //     ctx.strokeStyle = "purple"
+        //     ctx.stroke()
 
-            // ctx.fillStyle = "orange"
-            // ctx.fill()
-            // ctx.restore()
+        //     ctx.fillStyle = "red"
+        //     ctx.fill()
+        //     ctx.restore()
 
-        }
+        //     //Draw the second character
+        //     ctx.save()
+        //     ctx.translate(position2.x, position2.y)
+
+        //     ctx.beginPath()
+        //     ctx.moveTo(110, 90)
+        //     ctx.lineTo(145, 100)
+        //     ctx.lineTo(145, 90)
+        //     ctx.lineTo(155, 90)
+        //     ctx.lineTo(155, 100)
+        //     ctx.lineTo(190, 90)
+        //     ctx.lineTo(200, 140)
+        //     ctx.lineTo(175, 150)
+        //     ctx.lineTo(150, 140)
+        //     ctx.lineTo(125, 150)
+        //     ctx.lineTo(100, 140)
+        //     ctx.lineTo(110, 90)
+
+
+        //     ctx.lineWidth = 5
+        //     ctx.strokeStyle = "teal"
+        //     ctx.stroke()
+
+        //     ctx.fillStyle = "orange"
+        //     ctx.fill()
+        //     ctx.restore()
+
+        // }
 
         // start()
         Engine.currentScene = new MainScene()
