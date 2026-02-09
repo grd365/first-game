@@ -4,7 +4,7 @@ class WallGameObject extends GameObject{
         this.addComponent(new WallComponent())
         this.addComponent(new Polygon(),{points: [
             new Vector2(0, 0), new Vector2(30, 0), new Vector2(30, 30), new Vector2(0,30)
-        ], fillStyle: "peru"})
+        ], fillStyle: "peru", strokeStyle: "black"})
     }
     
 }
